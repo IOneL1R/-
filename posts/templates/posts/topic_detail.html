@@ -1,0 +1,19 @@
+{% extends "cor/layout.html" %}
+
+{% block content %}
+
+
+  <h3>Сообщения:</h3>
+  <ul>
+    {% for post in topic %}
+      <li>
+        <h4>{{post.titel}}</h4>
+        <strong>{{ post.auter }}</strong> написал:
+        <p>{{ post.des }}</p>
+        <em>{{ post.date }}</em>
+      </li>
+    {% empty %}
+      <li>Нет сообщений</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

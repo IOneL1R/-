@@ -6,3 +6,7 @@ class Topic(models.Model):
     des = models.TextField()
     date = models.DateTimeField(auto_now_add= True)
     auter = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+
+
+
