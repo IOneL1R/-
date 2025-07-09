@@ -1,0 +1,17 @@
+
+{% extends "cor/layout.html" %}
+
+
+{% block content %}
+ <h2>Вход<h2>
+<form method = "POST">
+     {% csrf_token %}
+     {% form.as_p %}
+     <button  type = "submit">Вход</button>
+     
+</form>
+
+
+
+
+{% endblock %}
