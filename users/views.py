@@ -12,9 +12,11 @@ def profile(request):
 
 def auth1(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = UserCreationForm(request.POST) 
         if form.is_valid():
-            form.save()
+            user = form.save()
+            Profile.objects.create(user = user)
+
             return redirect("login")
     else:
         form = UserCreationForm()
