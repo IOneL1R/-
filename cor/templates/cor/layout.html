@@ -19,9 +19,9 @@
   
           <a href="{%  url 'home'  %}" class="me-3 text-decoration-none text-dark">Главная</a>
           <a href="{%  url 'profile'  %}" class="me-3 text-decoration-none text-dark">Личный кабинет</a>
-          <a href="{%  url 'topic_detail'  %}" class="text-decoration-none text-dark">Посты</a>
-          <a href="{%  url 'reg'  %}" class="text-decoration-none text-dark">Регистрация</a>
-          <a href="{%  url 'login'  %}" class="text-decoration-none text-dark">Вход</a>
+          <a href="{%  url 'topic_detail'  %}" class=" me-3 text-decoration-none text-dark">Посты</a>
+          <a href="{%  url 'reg'  %}" class=" me-3 text-decoration-none text-dark">Регистрация</a>
+          <a href="{%  url 'login'  %}" class=" me-3 text-decoration-none text-dark">Вход</a>
           <form action="{% url 'logout' %}" method="post" style="display: inline;">
               {% csrf_token %}
               <button type="submit" class="text-decoration-none text-dark btn btn-link p-0">Выход</button>
